@@ -1,4 +1,4 @@
-import certificate from "../models/certificate.js";
+import certificate from "../models/Certificate.js";
 import Course from "../models/Course.js";
 import path from "path";
 import fs from "fs";
