@@ -5,7 +5,7 @@ import {
   verifyCertificate,
   updateCertificate
 } from "../controllers/certificatesController.js";
-import certificate from "../models/certificate.js";
+import certificate from "../models/Certificate.js";
 
 const router = express.Router();
 
