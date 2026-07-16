@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 // import certificate from "../models/certificate.js";
 import Course from "../models/Course.js";
 import CourseEnrollment from "../models/CourseEnrollment.js";
-import Certificate from "../models/certificate.js";
+import Certificate from "../models/Certificate.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
