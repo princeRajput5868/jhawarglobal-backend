@@ -8,7 +8,7 @@ import certificates from "./certificates.js";
 
 import adminAuth from "./adminAuth.js";
 import adminCourses from "./adminCourses.js";
-import admincertificates from "./admincertificates.js";
+import admincertificates from "./adminCertificates.js";
 
 const router = express.Router();
 
