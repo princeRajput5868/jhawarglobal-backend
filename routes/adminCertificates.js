@@ -9,7 +9,7 @@ import {
   adminListEnrollments,
   adminCreatecertificate,
   adminGetcertificate,
-} from "../controllers/admincertificatesController.js";
+} from "../controllers/adminCertificatesController.js";
 
 const router = express.Router();
 
