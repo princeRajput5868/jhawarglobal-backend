@@ -9,7 +9,11 @@ const Contact = sequelize.define(
     phone: { type: DataTypes.STRING },
     message: { type: DataTypes.TEXT, allowNull: false },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+    tableName: "contacts",
+    freezeTableName: true,
+  }
 );
 
 export default Contact;

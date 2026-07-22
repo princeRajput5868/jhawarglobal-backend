@@ -8,8 +8,9 @@ import sequelize from "./config/db.js";
 import certificateRoutes from "./routes/certificateRoutes.js";
 import adminPlacementsRoutes from "./routes/adminPlacementsRoutes.js";
 import adminTestimonialsRoutes from "./routes/adminTestimonialsRoutes.js";
+import adminSettingsRoutes from "./routes/adminSettingsRoutes.js";
 
-// ✅ Yeh imports sahi hain
+// ✅ Add this line after other admin routes
 
 dotenv.config();
 
@@ -33,6 +34,8 @@ app.use("/api", routes);
 app.use("/api/certificates", certificateRoutes);
 app.use("/api/admin/placements", adminPlacementsRoutes);
 app.use("/api/admin/testimonials", adminTestimonialsRoutes);
+app.use("/api/admin/settings", adminSettingsRoutes);
+// ✅ Yeh imports sahi hain
 
 // ✅ 404 Handler - LAST
 app.use((req, res) => {

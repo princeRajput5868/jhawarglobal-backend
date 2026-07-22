@@ -9,7 +9,11 @@ const TeamMember = sequelize.define(
     bio: { type: DataTypes.TEXT },
     photoUrl: { type: DataTypes.STRING },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+    tableName: "teammembers",
+    freezeTableName: true,
+  }
 );
 
 export default TeamMember;

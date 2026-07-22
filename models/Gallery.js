@@ -8,7 +8,11 @@ const Gallery = sequelize.define(
     imageUrl: { type: DataTypes.STRING, allowNull: false },
     description: { type: DataTypes.TEXT },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+    tableName: "galleries",
+    freezeTableName: true,
+  }
 );
 
 export default Gallery;

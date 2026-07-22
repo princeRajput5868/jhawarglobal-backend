@@ -9,7 +9,11 @@ const Page = sequelize.define(
     content: { type: DataTypes.TEXT },
     meta: { type: DataTypes.JSON, allowNull: true },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+    tableName: "pages",
+    freezeTableName: true,
+  }
 );
 
 export default Page;

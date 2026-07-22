@@ -6,23 +6,21 @@ const CourseEnrollment = sequelize.define(
   {
     courseSlug: { type: DataTypes.STRING, allowNull: false },
     fullName: { type: DataTypes.STRING, allowNull: false },
-    // simple identity in this project (no auth yet)
     visitorId: { type: DataTypes.STRING, allowNull: false },
     status: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: "enrolled", // enrolled | in_progress | completed
+      defaultValue: "enrolled",
     },
-    // Admin mapping identity (unique per course)
     enrollmentNumber: { type: DataTypes.STRING, allowNull: true },
     email: { type: DataTypes.STRING, allowNull: true },
-
     completedAt: { type: DataTypes.DATE },
   },
   {
     timestamps: true,
+    tableName: "courseenrollments",
+    freezeTableName: true,
   }
 );
 
 export default CourseEnrollment;
-

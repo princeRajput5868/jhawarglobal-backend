@@ -12,8 +12,11 @@ const Course = sequelize.define(
     durationHours: { type: DataTypes.INTEGER },
     isActive: { type: DataTypes.BOOLEAN, allowNull: false, defaultValue: true },
   },
-  { timestamps: true }
+  { 
+    timestamps: true,
+    tableName: "courses",
+    freezeTableName: true,
+  }
 );
 
 export default Course;
-

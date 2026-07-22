@@ -9,13 +9,13 @@ const CourseModule = sequelize.define(
     orderIndex: { type: DataTypes.INTEGER, allowNull: false },
     content: { type: DataTypes.TEXT },
     videoUrl: { type: DataTypes.STRING },
-    quiz: {
-      type: DataTypes.JSON,
-      allowNull: true,
-    },
+    quiz: { type: DataTypes.JSON, allowNull: true },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+    tableName: "coursemodules",
+    freezeTableName: true,
+  }
 );
 
 export default CourseModule;
-

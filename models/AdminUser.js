@@ -10,7 +10,11 @@ const AdminUser = sequelize.define(
     role: { type: DataTypes.STRING, allowNull: false, defaultValue: "admin" },
     isActive: { type: DataTypes.BOOLEAN, allowNull: false, defaultValue: true },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+    tableName: "adminusers",
+    freezeTableName: true,
+  }
 );
 
 export default AdminUser;

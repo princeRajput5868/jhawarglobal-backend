@@ -9,11 +9,13 @@ const certificate = sequelize.define(
     visitorId: { type: DataTypes.STRING, allowNull: false },
     certificateNumber: { type: DataTypes.STRING, allowNull: false, unique: true },
     issuedAt: { type: DataTypes.DATE, allowNull: false, defaultValue: DataTypes.NOW },
-    // In future: store signature image / template data
     meta: { type: DataTypes.JSON },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+    tableName: "certificates",
+    freezeTableName: true,
+  }
 );
 
 export default certificate;
-
