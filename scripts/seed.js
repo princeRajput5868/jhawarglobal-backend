@@ -89,7 +89,7 @@ const run = async () => {
         title: 'Salon Skills (Basics to Employability)',
         description: 'Learn salon fundamentals, hygiene, customer communication, and practical styling workflow.',
         level: 'Beginner',
-        coverImageUrl: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1200&q=80',
+        coverImageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgPtalOPAGP1lZ8O5GTBrt8NrjKBnjjKhuHGjvuf-opg&s=10',
         durationHours: 6,
       },
       {
@@ -97,7 +97,7 @@ const run = async () => {
         title: 'Parlour Skills (Care & Customer Experience)',
         description: 'A structured course on skin/hair care routines, safety, and professional service standards.',
         level: 'Beginner',
-        coverImageUrl: 'https://images.unsplash.com/photo-1512314889357-e157c41f5c88?w=1200&q=80',
+        coverImageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLmnKwaw_1rXlLd2DVYbAh6G1FsgXhnpUjRWFVseNJAQ&s=10',
         durationHours: 6,
       },
       {
@@ -105,7 +105,7 @@ const run = async () => {
         title: 'Electrician Fundamentals (Safety First)',
         description: 'Understand electrical safety, basic tools, wiring concepts, and safe troubleshooting approach.',
         level: 'Beginner',
-        coverImageUrl: 'https://images.unsplash.com/photo-1581092919535-7146e8b8aa3f?w=1200&q=80',
+        coverImageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRb-Lf33ysvK2w_tiiToW6GADSoKiayVCaSkW3Pg5AZw&s=10',
         durationHours: 8,
       },
       {
@@ -113,7 +113,7 @@ const run = async () => {
         title: 'Mechanic Basics (Service & Diagnostics)',
         description: 'Learn maintenance workflow, diagnostics mindset, and safe workshop practices.',
         level: 'Beginner',
-        coverImageUrl: 'https://images.unsplash.com/photo-1542362567-b07e54358753?w=1200&q=80',
+        coverImageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4b6-0o8pA67yqN01wHdB2Aaza7uQ_jhKnGj2srDNKxw&s=10',
         durationHours: 8,
       },
     ];
