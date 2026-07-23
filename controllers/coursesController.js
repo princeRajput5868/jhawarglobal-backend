@@ -110,16 +110,29 @@ export const completeCourse = async (req, res) => {
     if (!slug || !String(slug).trim()) return res.status(400).json({ message: "slug is required" });
     if (!fullName || !String(fullName).trim()) return res.status(400).json({ message: "fullName is required" });
 
+    const normalizedFullName = String(fullName).trim();
+
     const course = await Course.findOne({ where: { slug } });
     if (!course) return res.status(404).json({ message: "Course not found" });
 
-    const enrollment = await CourseEnrollment.findOne({ where: { courseSlug: slug, visitorId } });
-    if (!enrollment) return res.status(400).json({ message: "Enroll first to complete" });
+    // ✅ Enroll step removed from frontend, so auto-create enrollment here
+    // instead of requiring a separate /enroll call first.
+    let enrollment = await CourseEnrollment.findOne({ where: { courseSlug: slug, visitorId } });
 
-    enrollment.fullName = String(fullName).trim();
-    enrollment.status = "completed";
-    enrollment.completedAt = new Date();
-    await enrollment.save();
+    if (!enrollment) {
+      enrollment = await CourseEnrollment.create({
+        courseSlug: slug,
+        fullName: normalizedFullName,
+        visitorId,
+        status: "completed",
+        completedAt: new Date(),
+      });
+    } else {
+      enrollment.fullName = normalizedFullName;
+      enrollment.status = "completed";
+      enrollment.completedAt = new Date();
+      await enrollment.save();
+    }
 
     res.json({
       certificate: null,
@@ -134,4 +147,3 @@ export const completeCourse = async (req, res) => {
     });
   }
 };
-
